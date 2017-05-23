@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "pixelated rendering",
+    "version": "1",
+    "content_scripts": [{
+        "matches": ["*://*/*"],
+        "exclude_globs": ["*keep*"],
+        "css": ["style.css"]
+    }],
+    "permissions": [
+        "*://*/*",
+        "activeTab"
+    ],
+    "browser_action": {
+        "default_title": "pixelated rendering",
+        "default_icon": "icon_19px.png"
+    },
+    "background": {
+        "scripts": ["background.js"],
+        "persistant": false
+    }
+}
